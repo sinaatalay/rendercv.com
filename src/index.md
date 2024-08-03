@@ -4,6 +4,8 @@ template: home.html
 hide:
   - toc
   - navigation
+comments_header: "Comments and feedback"
+comments_paragraph: "Please leave your comments and feedback below so we can release v1 soon! We are currently in the beta stage."
 ---
 
 # Motivation
@@ -23,7 +25,3 @@ With RenderCV App:
 -   You will have the complete control over the $\LaTeX$ code.
 -   You can version control your CVs and archive them throughout the years.
 -   Your CV will always be reproducible since RenderCV is an open-source Python package.
-
-## Comments and feedback
-
-Please leave your comments and feedback below so we can release **v1** soon! We are currently in the **beta** stage.

@@ -1,5 +1,6 @@
 {% if not page.meta.disable_comments %}
-  <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
+  <h2 id="__comments">{{ page.meta.comments_header }}</h2>
+  <p>{{ page.meta.comments_paragraph }}</p>
   <!-- Insert generated snippet here -->
   <script src="https://giscus.app/client.js"
   data-repo="sinaatalay/rendercv"
