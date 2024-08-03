@@ -1,0 +1,3 @@
+# Blog
+
+Test blog index.

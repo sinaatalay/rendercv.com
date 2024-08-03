@@ -1,0 +1,80 @@
+site_name: RenderCV App
+site_url: https://rendercv.com
+site_description: An open-source LaTeX CV/resume generator
+docs_dir: src
+copyright: Copyright &copy; 2024 Sina Atalay & Meriç Üngör
+
+theme:
+  name: material
+  language: en
+  locale: en
+  custom_dir: src/assets/overrides
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/lightbulb-outline
+        name: "Switch to dark mode"
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/lightbulb
+        name: "Switch to light mode"
+  features:
+    - content.code.copy # the copy-to-clipboard buttons for code blocks
+    - content.action.view # view source button for pages
+    - navigation.indexes # allow mother pages to have their own index pages
+    - navigation.instant # instant navigation for faster page loads
+    - navigation.instant.prefetch # prefetch pages for instant navigation
+    - navigation.instant.progress # show progress bar for instant navigation
+    - navigation.top # back to top button
+    - search.highlight # highlight search results after going to a page
+    - search.suggest # show search suggestions while typing
+    - search.share # share search results with others
+    - toc.follow # if toc sidebar doesn't fit, scroll to the active heading
+    - content.code.annotate # allow annotations in code blocks
+
+font:
+  text: Roboto
+  code: Roboto Mono
+
+nav:
+  - Try the app: https://app.rendercv.com
+  - Blog: blog/index.md
+
+plugins:
+  - macros: # https://github.com/fralau/mkdocs-macros-plugin
+      module_name: src/assets/data/data
+
+  - blog:
+      blog_dir: blog
+      post_dir: "{blog}/posts"
+      authors_file: "{blog}/authors.yaml"
+      post_url_format: "blog/{slug}"
+      archive: false
+
+markdown_extensions:
+  - attr_list # allow assigning HTML attributes to elements
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.pathconverter # convert relative paths to absolute paths
+  - pymdownx.betterem
+  - pymdownx.tabbed: # content tabs
+      alternate_style: true
+
+extra_javascript:
+  - https://cdn.tailwindcss.com
+
+extra:
+  #  analytics:
+  #    provider: google
+  #    property: G-HH8XZL6SQK
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/sinaatalay/rendercv

@@ -1,0 +1,4 @@
+mkdocs-material==9.5.27
+mkdocs-macros-plugin==1.0.5
+pydantic==2.7.4
+ruamel.yaml==0.18.6
