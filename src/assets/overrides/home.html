@@ -1,26 +1,47 @@
 {% extends "main.html" %}
 {% block tabs %}
 {{ super() }}
-<style>.md-header{position:initial}.md-main__inner{margin:0}.md-content{display:none}@media screen and (min-width:60em){.md-sidebar--secondary{display:none}}@media screen and (min-width:76.25em){.md-sidebar--primary{display:none}}</style>
-<section class="mdx-container">
-    <div class="md-grid md-typeset">
-    <div class="mdx-hero">
-        <div class="mdx-hero__image">
-        <img src="assets/images/illustration.png" alt="" width="1659" height="1200" draggable="false">
+  <div class="homepage-gradient leading-relaxed tracking-wide flex flex-col">
+    <section class="container mx-auto">
+      <div class="text-center px-5">
+        <h1
+          class="my-12 text-xl font-bold leading-tight text-white"
+        >
+          An open-source $\LaTeX$ CV/resume generator
+        </h1>
+        <p
+          class="leading-normal text-gray-300 text-base mb-6"
+        >
+        An app for maintaining and version-controlling professional and customizable $\LaTeX$ CVs and resumes
+        </p>
+
+        <p
+          class="leading-normal text-gray-300 text-sm mb-8"
+        >
+        The beta version is currently available on the web. It will soon be released on IOS and Android.
+        </p>
+
+        <div class="flex flex-col sm:flex-row justify-center sm:space-x-4 space-y-4 sm:space-y-0">  
+          <button class="bg-blue-200 hover:bg-blue-300 text-gray-800 font-bold py-3 px-6 rounded inline-flex items-center text-xs mx-auto sm:mx-0">
+            <a href="https://github.com/sinaatalay/rendercv">GitHub Repository</a>
+            <svg class="fill-current w-4 h-4 ml-1 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z"></path></svg>
+          </button>
+
+          <button class="bg-blue-200 hover:bg-blue-300 text-gray-800 font-bold py-3 px-6 rounded inline-flex items-center text-xs mx-auto sm:mx-0">
+            <a href="https://app.rendercv.com">Try the web app</a>
+            <svg class="fill-current w-4 h-4 ml-1 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z"></path></svg>
+          </button> 
         </div>
-        <div class="mdx-hero__content">
-        <h1>Technical documentation that just works</h1>
-        <p>{{ config.site_description }}. Set up in 5 minutes.</p>
-        <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | e }}" class="md-button md-button--primary">
-            Quick start
-        </a>
-        <a href="{{ 'insiders/' | url }}" title="Material for MkDocs Insiders" class="md-button">
-            Get Insiders
-        </a>
+
+      </div>
+
+      <div class="flex items-center w-full mx-auto content-end">
+        <div
+          class="browser-mockup flex flex-1 mx-6 mt-6 mb-6 md:px-0 md:mx-12 md:mt-12 bg-white w-1/2 rounded shadow-xl"
+        >
+          <div class="w-full aspect-video " style="background-image: url(assets/images/webapp.png); background-size: contain; background-position: center; background-repeat: no-repeat;"></div>
         </div>
-    </div>
-    </div>
-</section>
+      </div>
+    </section>
+  </div>
 {% endblock %}
-{% block content %}{% endblock %}
-{% block footer %}{% endblock %}

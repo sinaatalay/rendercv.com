@@ -2,7 +2,9 @@ site_name: RenderCV App
 site_url: https://rendercv.com
 site_description: An open-source LaTeX CV/resume generator
 docs_dir: src
-copyright: Copyright &copy; 2024 Sina Atalay & Meriç Üngör
+copyright: Copyright &copy; 2024 Sina Atalay and Meriç Üngör
+repo_url: https://github.com/sinaatalay/rendercv
+repo_name: sinaatalay/rendercv
 
 theme:
   name: material
@@ -26,7 +28,6 @@ theme:
         name: "Switch to light mode"
   features:
     - content.code.copy # the copy-to-clipboard buttons for code blocks
-    - content.action.view # view source button for pages
     - navigation.indexes # allow mother pages to have their own index pages
     - navigation.instant # instant navigation for faster page loads
     - navigation.instant.prefetch # prefetch pages for instant navigation
@@ -43,7 +44,7 @@ font:
   code: Roboto Mono
 
 nav:
-  - Try the app: https://app.rendercv.com
+  - Home: index.md
   - Blog: blog/index.md
 
 plugins:
@@ -70,6 +71,14 @@ markdown_extensions:
 
 extra_javascript:
   - https://cdn.tailwindcss.com
+  - assets/javascripts/katex.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js
+
+extra_css:
+  - assets/stylesheets/rendercv.css
+  - https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css
+
 
 extra:
   #  analytics:
@@ -78,3 +87,6 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/sinaatalay/rendercv
+
+  status:
+    new: "New"
